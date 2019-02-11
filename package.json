@@ -1,0 +1,36 @@
+{
+  "name": "garrison",
+  "version": "0.0.1",
+  "productName": "Garrison Hearthstone",
+  "author": "CyanSalt",
+  "description": "An open-source, standalone version of Hearthstone.",
+  "main": "window.js",
+  "scripts": {
+    "build": "webpack --mode=production && node makefile.js",
+    "dev": "webpack --mode=development && electron .",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CyanSalt/garrison.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=8.5.0"
+  },
+  "devDependencies": {
+    "css-loader": "^2.0.0",
+    "electron": "^4.0.4",
+    "electron-packager": "^13.0.0",
+    "eslint": "^5.13.0",
+    "eslint-plugin-vue": "^5.1.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "png2icons": "^1.0.1",
+    "vue": "^2.5.20",
+    "vue-loader": "^15.4.2",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.5.20",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2"
+  }
+}
