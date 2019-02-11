@@ -1,6 +1,6 @@
-export const SavageRoarEffect = {
+export const MarkOfTheWildEffect = {
   id: 480,
-  name: 'Mark of the Wild Effect',
+  name: 'Mark of the Wild',
   type: Types.effect,
   effect(context) {
     context.self.gain(2, 2);
@@ -18,7 +18,6 @@ export default {
   collectible: true,
   cost: 3,
   async effect(context) {
-    await context.player.getAllCharacters()
-      .map(character => character.gainEffectThisTurn(SavageRoarEffect));
+    await context.target.gainEffect(MarkOfTheWildEffect)
   },
 }

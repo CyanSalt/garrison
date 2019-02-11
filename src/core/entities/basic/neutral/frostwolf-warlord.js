@@ -1,6 +1,6 @@
-export const FrostwolfWarlordEffect = {
+export const FrostwolfBanner = {
   id: 604,
-  name: 'Frostwolf Warlord',
+  name: 'Frostwolf Banner',
   type: Types.effect,
   async effect(context) {
     const count = context.args.count;
@@ -14,7 +14,7 @@ export const FrostwolfWarlordBattleCry = {
   type: Types.ability,
   async effect(context) {
     await context.self.gainEffect(
-      extendEffect(FrostwolfWarlordEffect, {count})
+      extendEffect(FrostwolfBanner, {count})
     );
   },
 }

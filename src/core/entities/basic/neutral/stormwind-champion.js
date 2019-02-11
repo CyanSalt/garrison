@@ -5,13 +5,13 @@ export const StormwindChampionEffect = {
   effect(context) {
     context.player.getAllMinions()
       .except(context.self)
-      .map(character => character.gainAura(StormwindChampionAura));
+      .map(character => character.gainAura(MightOfStormwind));
   },
 }
 
-export const StormwindChampionAura = {
+export const MightOfStormwind = {
   id: 310,
-  name: 'Stormwind Champion Aura',
+  name: 'Might of Stormwind',
   type: Types.aura,
   effect(context) {
     context.self.gain(1, 1);

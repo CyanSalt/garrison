@@ -1,6 +1,6 @@
 export const SavageRoarEffect = {
   id: 329,
-  name: 'Savage Roar Effect',
+  name: 'Savage Roar',
   type: Types.effect,
   effect(context) {
     return context.self.gain(2, 0);
