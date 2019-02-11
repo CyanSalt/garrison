@@ -40,6 +40,10 @@ export default class Player {
 
   }
 
+  equip(weapon) {
+
+  }
+
   destroy(target) {
 
   }
