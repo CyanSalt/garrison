@@ -4,6 +4,10 @@ export default class Character {
 
   }
 
+  once(event, handler) {
+
+  }
+
   getAdjacentMinions() {
 
   }

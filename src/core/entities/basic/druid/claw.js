@@ -1,3 +1,5 @@
+import {Types, Sets, Rarities, Classes} from '@/core/battle/constants'
+
 export default {
   id: 532,
   name: 'Claw',
@@ -8,7 +10,7 @@ export default {
   collectible: true,
   cost: 1,
   async effect(context) {
-    await context.player.gainHeroAttackThisTurn(2);
-    await context.player.gainArmor(2);
+    await context.player.gainHeroAttackThisTurn(2)
+    await context.player.gainArmor(2)
   },
 }

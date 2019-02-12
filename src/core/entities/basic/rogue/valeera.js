@@ -1,10 +1,12 @@
+import {Types, Sets, Rarities, Classes} from '@/core/battle/constants'
+
 export const DaggerMastery = {
   id: 201,
   name: 'Dagger Mastery',
   type: Types.heropower,
   cost: 2,
   async effect(context) {
-    await context.player.equip(WickedKnife);
+    await context.player.equip(WickedKnife)
   },
 }
 

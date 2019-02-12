@@ -1,10 +1,12 @@
+import {Types, Sets, Rarities, Classes} from '@/core/battle/constants'
+
 export const SteadyShot = {
   id: 481,
   name: 'Steady Shot',
   type: Types.heropower,
   cost: 2,
   async effect(context) {
-    await context.player.dealDamageTo(context.player.opponent.getHero(), 2);
+    await context.player.dealDamageTo(context.player.opponent.getHero(), 2)
   },
 }
 

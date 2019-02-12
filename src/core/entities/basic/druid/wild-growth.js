@@ -1,3 +1,5 @@
+import {Types, Sets, Rarities, Classes} from '@/core/battle/constants'
+
 export const ExcessMana = {
   id: 520,
   name: 'Excess Mana',
@@ -8,7 +10,7 @@ export const ExcessMana = {
   collectible: false,
   cost: 0,
   async effect(context) {
-    await context.player.drawCards(1);
+    await context.player.drawCards(1)
   },
 }
 
@@ -23,9 +25,9 @@ export default {
   cost: 3,
   async effect(context) {
     if (context.player.getMaxMana() === 10) {
-      await context.player.addCardToHand(ExcessMana);
+      await context.player.addCardToHand(ExcessMana)
     } else {
-      await context.player.gainEmptyMana(1);
+      await context.player.gainEmptyMana(1)
     }
   },
 }

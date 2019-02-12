@@ -1,10 +1,12 @@
+import {Types, Sets, Rarities, Classes} from '@/core/battle/constants'
+
 export const FrostwolfBanner = {
   id: 604,
   name: 'Frostwolf Banner',
   type: Types.effect,
   async effect(context) {
-    const count = context.args.count;
-    await context.self.gain(count, count);
+    const count = context.args.count
+    await context.self.gain(count, count)
   },
 }
 
@@ -13,9 +15,10 @@ export const FrostwolfWarlordBattleCry = {
   name: 'Frostwolf Warlord',
   type: Types.ability,
   async effect(context) {
+    const count = context.player.getAllMinions().count()
     await context.self.gainEffect(
       extendEffect(FrostwolfBanner, {count})
-    );
+    )
   },
 }
 

@@ -1,9 +1,11 @@
+import {Types, Sets, Rarities, Classes} from '@/core/battle/constants'
+
 export const SavageRoarEffect = {
   id: 329,
   name: 'Savage Roar',
   type: Types.effect,
   effect(context) {
-    return context.self.gain(2, 0);
+    return context.self.gain(2, 0)
   },
 }
 
@@ -18,6 +20,6 @@ export default {
   cost: 3,
   async effect(context) {
     await context.player.getAllCharacters()
-      .map(character => character.gainEffectThisTurn(SavageRoarEffect));
+      .map(character => character.gainEffectThisTurn(SavageRoarEffect))
   },
 }

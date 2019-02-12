@@ -1,3 +1,5 @@
+import {Types, Sets, Rarities, Classes} from '@/core/battle/constants'
+
 export default {
   id: 667,
   name: 'Starfire',
@@ -8,10 +10,10 @@ export default {
   collectible: true,
   cost: 6,
   targets(context) {
-    return context.getAllCharacters();
+    return context.battle.getAllCharacters()
   },
   async effect(context) {
-    await context.player.dealDamageTo(context.target, 5);
-    await context.player.drawCards(1);
+    await context.player.dealDamageTo(context.target, 5)
+    await context.player.drawCards(1)
   },
 }

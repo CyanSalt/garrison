@@ -1,3 +1,5 @@
+import {Types, Sets, Rarities, Classes} from '@/core/battle/constants'
+
 export const StormwindChampionEffect = {
   id: 310,
   name: 'Stormwind Champion Effect',
@@ -5,7 +7,7 @@ export const StormwindChampionEffect = {
   effect(context) {
     context.player.getAllMinions()
       .except(context.self)
-      .map(character => character.gainAura(MightOfStormwind));
+      .map(character => character.gainAura(MightOfStormwind))
   },
 }
 
@@ -14,7 +16,7 @@ export const MightOfStormwind = {
   name: 'Might of Stormwind',
   type: Types.aura,
   effect(context) {
-    context.self.gain(1, 1);
+    context.self.gain(1, 1)
   },
 }
 

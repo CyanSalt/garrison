@@ -1,9 +1,11 @@
+import {Types, Sets, Rarities, Classes, Events} from '@/core/battle/constants'
+
 export const Berserking = {
   id: 323,
   name: 'Berserking',
   type: Types.effect,
   effect(context) {
-    context.self.gain(3, 0);
+    context.self.gain(3, 0)
   },
 }
 

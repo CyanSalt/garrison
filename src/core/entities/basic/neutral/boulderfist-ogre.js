@@ -1,3 +1,5 @@
+import {Types, Sets, Rarities, Classes} from '@/core/battle/constants'
+
 export default {
   id: 60,
   name: 'Boulderfist Ogre',

@@ -1,3 +1,5 @@
+import {Types, Sets, Rarities, Classes} from '@/core/battle/constants'
+
 export default {
   id: 548,
   name: 'Innervate',
@@ -8,6 +10,6 @@ export default {
   collectible: true,
   cost: 0,
   async effect(context) {
-    await context.player.gainManaThisTurn(1);
+    await context.player.gainManaThisTurn(1)
   },
 }

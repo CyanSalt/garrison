@@ -1,3 +1,5 @@
+import {Types} from './constants'
+
 const taunt = {
   type: Types.effect,
   keyword: true,

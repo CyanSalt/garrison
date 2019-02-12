@@ -1,3 +1,5 @@
+import {Types, Sets, Rarities, Classes, Races} from '@/core/battle/constants'
+
 export default {
   id: 173,
   name: 'Core Hound',

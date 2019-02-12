@@ -1,3 +1,6 @@
+import {Types, Sets, Rarities, Classes} from '@/core/battle/constants'
+import Keywords from '@/core/battle/keywords'
+
 export default {
   id: 414,
   name: 'Lord of the Arena',

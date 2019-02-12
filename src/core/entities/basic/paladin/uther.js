@@ -1,10 +1,12 @@
+import {Types, Sets, Rarities, Classes} from '@/core/battle/constants'
+
 export const Reinforce = {
   id: 248,
   name: 'Reinforce',
   type: Types.heropower,
   cost: 2,
   async effect(context) {
-    await context.player.summon(SilverHandRecruit);
+    await context.player.summon(SilverHandRecruit)
   },
 }
 

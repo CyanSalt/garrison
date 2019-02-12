@@ -1,10 +1,13 @@
+import {Types, Sets, Rarities, Classes} from '@/core/battle/constants'
+import Keywords from '@/core/battle/keywords'
+
 export const MarkOfTheWildEffect = {
   id: 480,
   name: 'Mark of the Wild',
   type: Types.effect,
   effect(context) {
-    context.self.gain(2, 2);
-    context.self.gainEffect(Keywords.taunt);
+    context.self.gain(2, 2)
+    context.self.gainEffect(Keywords.taunt)
   },
 }
 

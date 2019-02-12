@@ -1,3 +1,5 @@
+import {Types, Sets, Rarities, Classes} from '@/core/battle/constants'
+
 export const NightbladeBattleCry = {
   id: 560,
   name: 'Nightblade',

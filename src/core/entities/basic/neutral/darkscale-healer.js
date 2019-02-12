@@ -1,3 +1,5 @@
+import {Types, Sets, Rarities, Classes} from '@/core/battle/constants'
+
 export const DarkscaleHealerBattleCry = {
   id: 84,
   name: 'Darkscale Healer',
