@@ -1,4 +1,5 @@
 import {Types, Sets, Rarities, Classes} from '@/core/battle/constants'
+import Entity from '../../../battle/modules/entity'
 
 export const FrostwolfBanner = {
   id: 604,
@@ -17,7 +18,7 @@ export const FrostwolfWarlordBattleCry = {
   async effect(context) {
     const count = context.player.getAllMinions().count()
     await context.self.gainEffect(
-      extendEffect(FrostwolfBanner, {count})
+      new Entity(FrostwolfBanner, {count})
     )
   },
 }

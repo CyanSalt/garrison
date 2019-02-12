@@ -16,11 +16,11 @@ export default class Character {
 
   }
 
-  async gainEffect(effect) {
+  async gainEffect(effect, args) {
 
   }
 
-  async gainEffectThisTurn(effect) {
+  async gainEffectThisTurn(effect, args) {
 
   }
 

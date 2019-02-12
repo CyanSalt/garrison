@@ -1,21 +1,24 @@
-import CharacterCollection from './character-collection'
+import Collection from './collection'
+import Entity from './entity'
 
 export default class Player {
 
-  constructor() {
+  constructor(deck) {
     this.hero = null
     this.heropower = null
     this.weapon = null
-    this.deck = []
-    this.hand = []
+    this.deck = deck.map(card => new Entity(card))
+    this.hands = []
     this.minions = []
     this.secrets = []
     this.mana = 0
     this.maxMana = 0
     this.armor = 0
+    this.fatigue = 0
+    this.shuffleDeck()
   }
 
-  static combine(player1, player2) {
+  static match(player1, player2) {
     player1.opponent = player2
     player2.opponent = player1
     return [player1, player2]
@@ -30,14 +33,11 @@ export default class Player {
   }
 
   getAllCharacters() {
-    return new CharacterCollection([
-      this.hero,
-      ...this.minions,
-    ])
+    return new Collection([this.hero, ...this.minions])
   }
 
   getAllMinions() {
-    return new CharacterCollection(this.minions)
+    return new Collection(this.minions)
   }
 
   getHero() {
@@ -50,6 +50,32 @@ export default class Player {
 
   getHeroPower() {
     return this.heropower
+  }
+
+  shuffleDeck() {
+    const deck = [...this.deck]
+    let i = deck.length
+    // eslint-disable-next-line space-unary-ops, space-infix-ops
+    while (i --> 0) {
+      const j = Math.floor(Math.random() * (i + 1))
+      ;[deck[j], deck[i]] = [deck[i], deck[j]]
+    }
+    this.deck = deck
+  }
+
+  dealInitialHands(count) {
+    this.hands = this.deck.slice(-count)
+    this.deck = this.deck.slice(0, -count)
+  }
+
+  decideInitialHands(changed) {
+    const discarded = []
+    for (const index of changed) {
+      discarded.push(this.hands[index])
+      this.hands[index] = this.deck.pop()
+    }
+    this.deck = this.deck.concat(discarded)
+    this.shuffleDeck()
   }
 
   playCard(card, target) {

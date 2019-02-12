@@ -1,5 +1,6 @@
 import {Types, Sets, Rarities, Classes} from '@/core/battle/constants'
 import Keywords from '@/core/battle/keywords'
+import Entity from '@/core/battle/entity'
 
 export default {
   id: 545,
@@ -13,6 +14,6 @@ export default {
   attack: 4,
   health: 7,
   effects: [
-    extendEffect(Keywords.spellDamage, {count: 1}),
+    new Entity(Keywords.spellDamage, {count: 1}),
   ],
 }
