@@ -1,18 +1,16 @@
-export default class Character {
+import Emitter from './emitter'
 
-  whenever(event, handler) {
-
-  }
-
-  once(event, handler) {
-
-  }
+export default class Character extends Emitter {
 
   getAdjacentMinions() {
 
   }
 
   dealDamageTo(target, count) {
+
+  }
+
+  takeDamage(count) {
 
   }
 

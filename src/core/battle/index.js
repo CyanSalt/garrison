@@ -1,5 +1,6 @@
 import Player from './modules/player'
 import Collection from './modules/collection'
+import TheCoin from '@/core/entities/basic/neutral/the-coin'
 
 export default class Battle {
 
@@ -7,10 +8,31 @@ export default class Battle {
     const player1 = new Player(deck1)
     const player2 = new Player(deck2)
     this.players = Player.match(player1, player2)
+    this.turn = 0
+  }
+
+  async prepare() {
     this.firstPlayer = this.players[Math.floor(Math.random() * 2)]
-    this.firstPlayer.dealInitialHands(3)
-    this.firstPlayer.opponent.dealInitialHands(4)
-    // this.currentPlayer = null
+    await Promise.all([
+      this.firstPlayer.dealInitialHands(3),
+      this.firstPlayer.opponent.dealInitialHands(4),
+    ])
+    this.firstPlayer.opponent.addCardToHand(TheCoin)
+    this.startNextTurn()
+  }
+
+  startNextTurn() {
+    if (!this.currentPlayer) {
+      this.currentPlayer = this.firstPlayer
+    } else {
+      this.currentPlayer = this.currentPlayer.opponent
+    }
+    this.turn++
+    this.currentPlayer.startTurn()
+  }
+
+  endThisTurn() {
+
   }
 
   getAllCharacters() {
