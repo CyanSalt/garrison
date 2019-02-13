@@ -1,8 +1,8 @@
 import Player from './modules/player'
 import Collection from './modules/collection'
-import TheCoin from '@/core/entities/basic/neutral/the-coin'
+import TheCoin from '@/core/entities/basic/the-coin'
 
-export default class Battle {
+export default class Game {
 
   constructor(deck1, deck2) {
     const player1 = new Player(deck1)
@@ -11,7 +11,7 @@ export default class Battle {
     this.turn = 0
   }
 
-  async prepare() {
+  async start() {
     this.firstPlayer = this.players[Math.floor(Math.random() * 2)]
     await Promise.all([
       this.firstPlayer.dealInitialHands(3),

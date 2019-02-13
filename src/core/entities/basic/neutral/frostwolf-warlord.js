@@ -1,5 +1,5 @@
-import {Types, Sets, Rarities, Classes} from '@/core/battle/constants'
-import Entity from '@/core/battle/modules/entity'
+import {Types, Sets, Rarities, Classes} from '@/core/game/constants'
+import Entity from '@/core/game/modules/entity'
 
 export const FrostwolfBanner = {
   id: 604,

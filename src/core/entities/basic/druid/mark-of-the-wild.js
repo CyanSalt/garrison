@@ -1,5 +1,5 @@
-import {Types, Sets, Rarities, Classes} from '@/core/battle/constants'
-import Keywords from '@/core/battle/keywords'
+import {Types, Sets, Rarities, Classes} from '@/core/game/constants'
+import Keywords from '@/core/game/keywords'
 
 export const MarkOfTheWildEffect = {
   id: 480,

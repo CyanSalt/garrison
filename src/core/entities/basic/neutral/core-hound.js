@@ -1,4 +1,4 @@
-import {Types, Sets, Rarities, Classes, Races} from '@/core/battle/constants'
+import {Types, Sets, Rarities, Classes, Races} from '@/core/game/constants'
 
 export default {
   id: 173,

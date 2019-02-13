@@ -1,4 +1,4 @@
-import {Types, Sets, Rarities, Classes} from '@/core/battle/constants'
+import {Types, Sets, Rarities, Classes} from '@/core/game/constants'
 
 export const SavageRoarEffect = {
   id: 329,

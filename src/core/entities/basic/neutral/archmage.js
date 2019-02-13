@@ -1,6 +1,6 @@
-import {Types, Sets, Rarities, Classes} from '@/core/battle/constants'
-import Keywords from '@/core/battle/keywords'
-import Entity from '@/core/battle/entity'
+import {Types, Sets, Rarities, Classes} from '@/core/game/constants'
+import Keywords from '@/core/game/keywords'
+import Entity from '@/core/game/entity'
 
 export default {
   id: 545,

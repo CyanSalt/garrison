@@ -1,4 +1,4 @@
-import {Types, Sets, Rarities, Classes, Events} from '@/core/battle/constants'
+import {Types, Sets, Rarities, Classes, Events} from '@/core/game/constants'
 
 export const Berserking = {
   id: 323,

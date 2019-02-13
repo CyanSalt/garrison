@@ -1,4 +1,4 @@
-import {Types, Sets, Rarities, Classes} from '@/core/battle/constants'
+import {Types, Sets, Rarities, Classes} from '@/core/game/constants'
 
 export default {
   id: 619,
@@ -10,7 +10,7 @@ export default {
   collectible: true,
   cost: 0,
   targets(context) {
-    return context.battle.getAllCharacters()
+    return context.game.getAllCharacters()
   },
   async effect(context) {
     await context.player.dealDamageTo(context.target, 1)
