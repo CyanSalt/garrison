@@ -6,9 +6,9 @@
 <script>
 export default {
   el: '#main',
-  beforeCreate() {
+  async beforeCreate() {
     // custom stylesheet
-    const stylesheet = this.$storage.readSync('custom.css')
+    const stylesheet = await this.$storage.read('custom.css')
     if (stylesheet) {
       const element = document.createElement('style')
       element.appendChild(document.createTextNode(stylesheet))
